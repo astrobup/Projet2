@@ -58,6 +58,33 @@ a {
     color: var(--main-bg-color)
 }
 
+.show-more {
+    font-weight: bold;
+}
+
+/****** En-tête ***********/
+.entete {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+} 
+
+.entete-logo {
+    width: 50%;
+}
+
+.entete-nav {
+    width: 25%;
+    display:flex;
+    justify-content: space-around;
+}
+
+nav section:hover {
+    border-top:solid #0065FC 3px;
+}
+
+
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
