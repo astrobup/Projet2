@@ -57,7 +57,27 @@ a {
 .neutral-star {
     color: var(--main-bg-color)
 }
+/****** Entête ***********/
+.entete {
+    display:flex;
+    justify-content: space-between;
+    padding:10px;
+    
+}
 
+.entete nav {
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+nav {
+    width: 25%;
+}
+
+nav section:hover {
+    border-top: 3px #0065FC solid;
+}
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
