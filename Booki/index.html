@@ -15,37 +15,56 @@
 </head>
 
 <body>
-    <div class="main-container">
-
+    
+    <section class="main-container">
         <!-- En-tête du site -->
-        <header> 
-            <div class="entete">
-                <section class="entete-logo">
-                    <img src="images/logo/Booki.png" alt="Logo Booki">
-                </section>
-                <nav class="entete-nav">
-                    <section> 
-                        <p>Hébergements</p>
-                    </section>
-                    <section> 
-                        <p>Activités</p>
-                    </section>
-                </nav>
-                
-                
+    <header> 
+        <section class="entete">
+            <div class="entete-logo">
+                <img src="images/logo/Booki.png" alt="Logo Booki">
             </div>
-        </header>
+            <nav class="entete-nav">
+                <div> 
+                    <p>Hébergements</p>
+                </div>
+                <div> 
+                    <p>Activités</p>
+                </div>
+            </nav>
+            
+            
+        </section>
+    </header>       
      
 
         <!-- Conteneur principal du site -->
         <main>
-            <!-- Formulaire de recherche "Trouvez votre hébergement" -->
-            <div class="search-form">
-                
-            </div>
+            <!-- Formulaire de recherche "Trouvez votre hébergement" + Filtres -->
+            <section class="search-form">
+                <div class="form-title">
+                    <h2> Trouvez votre hébergement pour des vacances de rêve</h2>
+                    <h3> En plein centre-ville ou en pleine nature</h3>
+                </div>
+                <!-- Formulaire de recherche -->
+                <div class="search-bar">   
+                    <form method="get" action="">
+                        <i class="fa-solid fa-location-dot search-logo"></i>
+                        <input type="text" name="searched-city" id="searched-city" placeholder="Cherchez votre destination">
+                        <input type="submit" value="Rechercher" class="form-button">                                        
+                    </form>
+                </div>
+                <!-- Parties filtres -->
+                <div class="filters-box">                    
+                    <h2> Filtres</h2>
+                    <p> <i class="fa-solid fa-money-bill-wave"></i> <span class="filter-name">Économique</span></p>
+                    <p> <i class="fa-solid fa-person"></i> <span class="filter-name">Familial</span></p>
+                    <p> <i class="fa-solid fa-heart"></i> <span class="filter-name">Romantique</span></p>
+                    <p> <i class="fa-solid fa-fire"></i> <span class="filter-name">Nos Pépites</span></p>                    
+                </div>
+            </section>
 
             <!-- Conteneur "Hébergements et populaires" avec les cartes des logements-->
-            <div class="hebergements-and-populaires"> 
+            <section class="hebergements-and-populaires"> 
                 <section class="hebergements">
                     <div class="hebergements-title">
                         <h2 class="section-title"> Hébergements à Marseille</h2>
@@ -230,10 +249,10 @@
                         </a>
                     </div>
                 </section>
-            </div>
+            </section>
         </main>
         <footer></footer>
-    </div>
+    </section>
 </body>
 
 </html>

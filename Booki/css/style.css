@@ -62,15 +62,19 @@ a {
     font-weight: bold;
 }
 
-/****** En-tête ***********/
+/****** En-tête **********/
 .entete {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
+    height: 79px;
 } 
 
 .entete-logo {
-    width: 50%;
+    width: 161px;
+    height: 79px;
+    display: flex;
+    align-items: center;
 }
 
 .entete-nav {
@@ -79,15 +83,80 @@ a {
     justify-content: space-around;
 }
 
-nav section:hover {
+nav div:hover {
     border-top:solid #0065FC 3px;
 }
 
 .entete-logo img {
-    max-width: 15%; /* Automation de la largeur du logo en %, sinon trouver une valeur absolue / essayer sur la hauteur */
-    height: auto;
+    max-width: 61px; 
+    height: 19px;
+    
 }
 
+
+/****** Barre de recherche ***********/
+.search-bar {
+   border: 1px solid white;
+   border-radius: 15px;
+   width: 377px;
+   height: 49px;
+   margin: 15px 0px 15px 0px;
+   
+}
+
+.search-bar form {
+   display: flex;
+  
+
+} 
+.form-button {
+    border: 1px;
+    border-radius:0px 15px 15px 0px;
+    background-color: #0065FC;
+    gap: 10px;
+    padding: 15px 16px 15px 16px;
+    color:white;
+    width: 132px;
+    height: 49px;
+    
+}
+.search-bar i {
+    background-color: #F2F2F2;
+    border:1px;
+    border-radius:15px 0px 0px 15px;
+    width: 50px;
+    height: 49px;
+    
+}
+.fa-location-dot {
+    color: #000000;
+    
+}
+
+#searched-city {
+    width: 195px;
+}
+/****** Filtres *********/
+.filters-box {
+    display:flex;
+    justify-content: space-between;
+    width:55%;
+    
+}
+.filters-box p {
+    display:flex;
+    align-items: center;
+    border: 2px solid #d9d9d9;
+    border-radius:25px;
+    gap:10px;
+    padding:4px 19px 4px 19px;
+    
+    
+}
+
+.filters-box p:hover {
+    background-color: #DEEBFF;
+}
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
