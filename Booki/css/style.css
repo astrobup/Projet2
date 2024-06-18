@@ -16,6 +16,7 @@
 body {
     display: flex;
     justify-content: center;
+    margin:0;
 }
 
 .main-container {
@@ -83,9 +84,12 @@ a {
     justify-content: space-around;
 }
 
-nav div:hover {
+nav div:hover,
+nav div.active {
     border-top:solid #0065FC 3px;
 }
+
+
 
 .entete-logo img {
     max-width: 61px; 
@@ -124,13 +128,26 @@ nav div:hover {
     background-color: #F2F2F2;
     border:1px;
     border-radius:15px 0px 0px 15px;
-    width: 50px;
-    height: 49px;
+    
+    
     
 }
+
+.search-logo-container {
+    
+    width: 49px;
+    border-radius: 15px 0px 0px 15px;
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
 .fa-location-dot {
     color: #000000;
-    
+        
 }
 
 #searched-city {
@@ -156,6 +173,7 @@ nav div:hover {
 
 .filters-box p:hover {
     background-color: #DEEBFF;
+    cursor: pointer;
 }
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
@@ -172,8 +190,43 @@ nav div:hover {
 
 /****** Hebergements ***********/
 .hebergements {
-    width: 65%;
+    width: 63%;
+    
 }
+
+.hebergements-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap:30px;  
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+ 
+
+.hebergements-cards-container .card-content {
+    
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.hebergements-cards-container img {
+    
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 124px;
+    width: 100%;
+    object-fit: fill;
+    
+}
+
+
+
+
 
 /****** Populaires ***********/
 .populaires {

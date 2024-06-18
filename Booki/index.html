@@ -24,7 +24,7 @@
                 <img src="images/logo/Booki.png" alt="Logo Booki">
             </div>
             <nav class="entete-nav">
-                <div> 
+                <div class="active"> 
                     <p>Hébergements</p>
                 </div>
                 <div> 
@@ -48,7 +48,7 @@
                 <!-- Formulaire de recherche -->
                 <div class="search-bar">   
                     <form method="get" action="">
-                        <i class="fa-solid fa-location-dot search-logo"></i>
+                        <div class="search-logo-container"> <i class="fa-solid fa-location-dot"></i> </div>
                         <input type="text" name="searched-city" id="searched-city" placeholder="Cherchez votre destination">
                         <input type="submit" value="Rechercher" class="form-button">                                        
                     </form>
@@ -69,8 +69,9 @@
                     <div class="hebergements-title">
                         <h2 class="section-title"> Hébergements à Marseille</h2>
                     </div>
-                    <div class="henergements-cards">
-                        <article class="card">
+                    <div class="hebergements-cards-container">
+                    <a href="#">
+                        <article class="card">                            
                             <img src="./images/hebergements/fred-kleber.jpg" alt="Image de la chambre d'hôtel montrant un lit">
                             <div class="card-content">
                                 <div class="card-txt">
@@ -88,7 +89,9 @@
                             </div>
 
                         </article>
-                        <article class="card">
+                    </a>
+                    <a href="#">
+                        <article class="card">                        
                             <img src="./images/hebergements/febrian-zakaria.jpg" alt="Image de la chambre d'hôtel montrant un lit">
                             <div class="card-content">
                                 <div class="card-txt">
@@ -103,9 +106,10 @@
                                         <i class="fa-xs fa-solid fa-star neutral-star" aria-hidden="true"></i>
                                         <span class="sr-only">Note de 4 sur 5</span>
                                 </div>
-                            </div>
-
+                            </div>                        
                         </article>
+                    </a>
+                    <a href="#">
                         <article class="card">
                             <img src="./images/hebergements/reisetopia.jpg" alt="Image de la chambre d'hôtel montrant un lit">
                             <div class="card-content">
@@ -124,6 +128,8 @@
                             </div>
 
                         </article>
+                    </a>
+                    <a href="#">
                         <article class="card">
                             <img src="./images/hebergements/annie-spratt.jpg" alt="Image de la chambre d'hôtel montrant un lit">
                             <div class="card-content">
@@ -142,6 +148,8 @@
                             </div>
 
                         </article>
+                    </a>
+                    <a href="#">
                         <article class="card">
                             <img src="./images/hebergements/marcus-loke.jpg" alt="Image de la chambre d'hôtel montrant un lit">
                             <div class="card-content">
@@ -160,6 +168,8 @@
                             </div>
 
                         </article>
+                    </a>
+                    <a href="#">
                         <article class="card">
                             <img src="./images/hebergements/nicate-lee.jpg" alt="Image de la chambre d'hôtel montrant un lit">
                             <div class="card-content">
@@ -178,6 +188,7 @@
                             </div>
 
                         </article>
+                    </a>
                     </div>
                     <div>
                         <p class="show-more">Afficher plus </p>
