@@ -99,13 +99,16 @@ nav div.active {
 
 
 /****** Barre de recherche ***********/
+.search-form {
+    margin-bottom: 40px;
+}
 .search-bar {
    border: 1px solid white;
    border-radius: 15px;
    width: 377px;
    height: 49px;
    margin: 15px 0px 15px 0px;
-   
+  
 }
 
 .search-bar form {
@@ -179,6 +182,8 @@ nav div.active {
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
+    max-width: 100%;
+    
 }
 
 .hebergements-and-populaires section {
@@ -191,16 +196,19 @@ nav div.active {
 /****** Hebergements ***********/
 .hebergements {
     width: 63%;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
     
 }
 
 .hebergements-cards-container {
     display: flex;
     flex-wrap: wrap;
-    gap:30px;  
+    gap: 1rem;  
     justify-content: space-between;
     align-items: center;
-
+    width: 100%;
 }
 
  
@@ -217,13 +225,16 @@ nav div.active {
 .hebergements-cards-container img {
     
     border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    height: 124px;
+    border-top-right-radius: 20px;    
+    max-height: 7.1875rem;
     width: 100%;
     object-fit: fill;
     
 }
 
+.hebergements .card-ctn {
+    width: calc(33% - 2rem);
+}
 
 
 
@@ -272,9 +283,50 @@ nav div.active {
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
+/********** Activités **********/
+.activites {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap:30px;
+    margin-top: 30px;    
+}
+
+.activites-cards-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.activites-cards-container img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: fill;
+}
+
+.card-activites {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    height: 439px;
+}
+
+.card-activites h3 {
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
 
 
+/********** Footer conteneur **********/
+.footer-container {
+    display: flex;
+    background-color: #F2F2F2;
+    margin-top: 20px;
+    padding: 20px;
+    gap:15px;
+}
 
+.footer-container div {
+    width: 33%;
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
