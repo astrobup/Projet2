@@ -78,6 +78,11 @@ ul {
     list-style-type: none;
 }
 
+::placeholder {
+    font-size:18px;
+    font-weight: 700;
+    color:black;        
+}
 /****** En-tête **********/
 .entete {
     display: flex;
@@ -93,13 +98,17 @@ ul {
     align-items: center;
 }
 
-.entete-nav {
-    gap: 15px;
+.entete-nav ul {    
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;    
+    margin: 0;
+    height: 35px;
+    gap: 68px;    
 }
 
-
+nav li {
+    padding-top: 15px;
+}
 
 nav li:hover,
 nav li.active {
@@ -127,11 +136,12 @@ nav li.active {
     height: 49px;
     margin: 15px 0px 15px 0px;
     padding-top: 1px;
+    
 
 }
 
 .search-bar form {
-    display: flex;
+    display: flex;       
 }
 
 .form-button {
@@ -175,6 +185,10 @@ nav li.active {
 
 #searched-city {
     width: 195px;
+    border-top:2px solid #F2F2F2;   
+    border-bottom:2px solid #F2F2F2;
+    border-left: #FFFF;  
+    border-right: #FFFF; 
 }
 
 /****** Filtres *********/
@@ -393,7 +407,12 @@ nav li.active {
 .footer-h2 {
     font-size: 18px;
 }
-
+.footer-container ul {
+    display: flex;
+    flex-direction: column;
+    padding-left:0;
+    gap:15px;
+}
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
