@@ -7,6 +7,8 @@
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
+    --mobile-bg-color: #f2f2f2;
+    --color-white: #FFF;
 }
 
 .fa-solid {
@@ -16,15 +18,18 @@
 body {
     display: flex;
     justify-content: center;
-    margin: 0;
+    flex-direction: column;
+    margin: 0;   
+    
+}
+header, footer, .main-container {
+    padding: 0 50px;    
+    width: 100%;
+    max-width: 1440px;    
+    box-sizing: border-box;
+    margin: auto;
 }
 
-.main-container {
-    width: 100%;
-    max-width: 1440px;
-    padding: 0 50px;
-    box-sizing: border-box;
-}
 
 a {
     color: inherit;
@@ -37,7 +42,7 @@ a {
 }
 
 .card {
-    background-color: white;
+    background-color: var(--color-white);
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
@@ -61,7 +66,7 @@ a {
 }
 
 .show-more {
-    font-weight: bold;    
+    font-weight: bold;
 }
 
 h2,
@@ -81,6 +86,7 @@ ul {
 
 
 /****** En-tête **********/
+
 .entete {
     display: flex;
     justify-content: space-between;
@@ -105,21 +111,19 @@ ul {
 
 nav li {
     padding-top: 15px;
-    border-top: solid 2px white;
+    border-top: solid 2px var(--color-white);
 }
 
 nav li:hover,
 nav li.active {
-    border-top: solid #0065FC 2px;
-    cursor:pointer;
+    border-top: solid var(--main-color) 2px;
+    cursor: pointer;
 }
 
 
 
 .entete-logo img {
     max-width: 61px;
-    height: 19px;
-
 }
 
 .form-title h2 {
@@ -130,25 +134,23 @@ nav li.active {
 
 /****** Barre de recherche ***********/
 .search-form {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .search-bar {
-    border: 1px solid white;
+    border: 1px solid var(--color-white);
     border-radius: 15px;
     width: 377px;
     height: 49px;
-    margin: 15px 0px 15px 0px;
-    padding-top: 1px;
-
-
 }
 
-input[type=text] {
+input[type=search] {
     font-size: 18px;
     font-weight: 700;
     color: black;
-    padding-left: 15px;
 }
 
 .search-bar form {
@@ -158,10 +160,10 @@ input[type=text] {
 .form-button {
     border: 1px;
     border-radius: 0px 15px 15px 0px;
-    background-color: #0065FC;
+    background-color: var(--main-color);
     gap: 10px;
     padding: 15px 16px 15px 16px;
-    color: white;
+    color: var(--color-white);
     width: 35%;
 }
 
@@ -170,13 +172,11 @@ input[type=text] {
 }
 
 .search-bar i {
-    background-color: #F2F2F2;
     border: 1px;
     border-radius: 15px 0px 0px 15px;
 }
 
 .search-logo-container {
-
     width: 49px;
     border-radius: 15px 0px 0px 15px;
     background-color: #F2F2F2;
@@ -191,42 +191,51 @@ input[type=text] {
 }
 
 #searched-city {
-    width: 46%;
+    min-width: calc(50% - 48px);
     border-top: 2px solid #F2F2F2;
     border-bottom: 2px solid #F2F2F2;
     border-left: #FFFF;
     border-right: #FFFF;
+    padding: 14px 24px;
+}
+
+.button-icon {
+    display: none;
 }
 
 /****** Filtres *********/
 .filters-box {
     display: flex;
     gap: 15px;
-    min-width: 50%;
     align-items: center;
 }
 
 .filters-box h2 {
     font-size: 18px;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .filters-icons {
     display: flex;
-    gap: 20px;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
     height: 100%;
 }
 
-.filters-box p {
+.filters-box li {
     display: flex;
     align-items: center;
     border: 2px solid #d9d9d9;
     border-radius: 25px;
     gap: 10px;
-    margin:0;
+    margin: 0;
+    padding: 13px 19px;
+    font-weight: 700;
+    font-size: 17px;
 }
 
-.filters-box p:hover {
+.filters-box li:hover {
     background-color: #DEEBFF;
     cursor: pointer;
 }
@@ -246,8 +255,7 @@ input[type=text] {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 24px;
-    height: 24px;
+    padding: 10px;
     border: solid 1px #d9d9d9;
     border-radius: 50%;
 }
@@ -260,7 +268,6 @@ input[type=text] {
 }
 
 .hebergements-and-populaires section {
-    background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
@@ -271,7 +278,25 @@ input[type=text] {
     width: 63%;
     gap: 40px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
+    background-color: var(--main-bg-color);
+}
+
+.card-img-ctn {
+    height: 124px;
+    overflow: hidden;
+    position: relative;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card-img-ctn img {
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
 }
 
 .hebergements-cards-container {
@@ -291,25 +316,18 @@ input[type=text] {
     box-sizing: border-box;
 }
 
-.hebergements-cards-container img {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    max-height: 7.1875rem;
-    width: 100%;
-    object-fit: fill;
-}
-
 .hebergements .card-ctn {
     width: calc(33% - 2rem);
 }
 
 .show-more:hover {
-    cursor:pointer
+    cursor: pointer
 }
 
 /****** Populaires ***********/
 .populaires {
     width: 32%;
+    background-color: var(--main-bg-color);
 }
 
 .populaires-title {
@@ -363,26 +381,13 @@ input[type=text] {
 
 .activites-cards-container {
     display: flex;
-    justify-content: space-between;
     width: 100%;
     gap: 30px;
 }
 
-.card-ctn {
-    width: 25%;
-}
-
-.activites-cards-container img {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    object-fit: fill;
-    width: 100%;
-    height: 100%;
-}
-
-.card-activites {
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
+.card-ctn-acti {
+    width: calc(25% - 30px);
+    display: flex;
 }
 
 .card-image-container {
@@ -390,6 +395,23 @@ input[type=text] {
     border-top-right-radius: 20px;
     height: 380px;
     overflow: hidden;
+    position: relative;
+}
+
+.card-image-container img {
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card-activites {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    width: 100%;
 }
 
 .card-activites h3 {
@@ -400,7 +422,7 @@ input[type=text] {
 /********** Footer conteneur **********/
 .footer-container {
     display: flex;
-    background-color: #F2F2F2;
+    background-color: #F2F2F2;    
     margin-top: 20px;
     padding: 20px;
     gap: 15px;
@@ -433,12 +455,13 @@ footer li:hover {
     .filters-box {
         flex-direction: column;
         align-items: flex-start;
-        gap: 0px;
+        gap: 20px;
     }
 
     .filters-box h2 {
         margin: 0;
     }
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -455,7 +478,7 @@ footer li:hover {
     .populaires-cards {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        gap: 20px;
     }
 
     .populaires-cards a {
@@ -477,23 +500,169 @@ footer li:hover {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 768px) {
+    header, footer, .main-container {
+        padding: 0;
+        max-width: 768px;
+        margin: auto;
+    }
+
+    .activites {
+        padding: 0 30px;
+    }
+
+
+
+    /******* En-tête *****/
+
     .entete {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .entete-logo {
+        width: 100%;
+        justify-content: center;
+        padding-top: 15px;
+    }
+
+    .entete-nav {
+        width: 100%;
+    }
+
+    .entete-nav ul {
+        gap: 0;
+        padding-left: 0;
+        text-align: center;
+        border-top: none;
+        border-bottom: solid 2px #F2F2F2;
     }
 
     .entete-nav li {
-        max-width: 100%;
+        width: 50%;
+        padding-top: 0;
+    }
+
+    .entete-nav li.active,
+    .entete-nav li:hover {
+        border-top: none;
+        border-bottom: solid 2px var(--main-color);
+    }
+
+    /******* Filtres + Barre de recherche ****/
+
+    .search-form {
+        padding: 0 20px;
+    }
+
+    .search-bar {
+        width: 100%;
     }
 
     .filters-icons {
         flex-wrap: wrap;
         flex-direction: row;
+        justify-content: center;
+        gap: 10px;
     }
 
-    .filters-icons p {
-        width: 40%;
+    .filters-icons li {
+        width: calc(50% - 48px);
+        /**** 50px -> 20px*2 (padding) + 10px (gap) ****/
+        font-size: 14px;
+    }
+
+    .button-icon {
+        display: block;
+        color: #FFFF;
+    }
+
+    .button-content {
+        display: none;
+    }
+
+    .form-button {
+        width: auto;
+    }
+
+    #searched-city {
+        width: auto;
+    }
+
+    /********** Hébergements et populaires *********/
+
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+    }
+
+    .hebergements-and-populaires section {
+        border-radius: 0px;
+    }
+
+    /********** Populaires **********/
+
+    .populaires {
+        background-color: var(--mobile-bg-color);
+        margin-top: 0;
+    }
+
+    .populaires-cards {
+        flex-direction: column;
+    }
+
+    .populaires-cards a {
+        width: 100%;
+    }
+
+    .populaires-cards img {
+        max-width: 30%;
+    }
+
+    /********** Hébergements **********/
+
+    .hebergements {
+        background-color: var(--color-white);
+    }
+
+    .hebergements-cards-container {
+        flex-direction: column;
         align-items: flex-start;
+    }
+
+    .hebergements-cards-container .card-ctn {
+        width: 100%;
+    }
+
+    /********** Activités **********/
+
+    .activites {
+        box-sizing: border-box;
+    }
+    .activites-cards-container {
+        flex-direction: column;
+    }
+
+    .activites-cards-container .card-ctn-acti {
+        width: 100%;
+    }
+
+    .card-image-container {
+        max-height: 141px;
+    }
+
+    .card-image-container img {
+        width: 100%;
+    }
+
+    /********** Pied de page **********/
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-container div {
+        width: 100%;
     }
 }
