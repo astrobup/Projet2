@@ -653,6 +653,7 @@ footer li:hover {
 
     .hebergements {
         background-color: var(--color-white);
+        gap: 15px;
     }
 
     .hebergements-cards-container {
