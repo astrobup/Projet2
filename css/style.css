@@ -203,6 +203,9 @@ input[type=search] {
     display: none;
 }
 
+.button-icon {
+    display: none;
+}
 /****** Filtres *********/
 .filters-box {
     display: flex;
@@ -282,6 +285,22 @@ input[type=search] {
     background-color: var(--main-bg-color);
 }
 
+.card-img-ctn {
+    height: 124px;
+    overflow: hidden;
+    position: relative;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card-img-ctn img {
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
 .card-img-ctn {
     height: 124px;
     overflow: hidden;
@@ -494,7 +513,7 @@ footer li:hover {
     }
 
     .card-image-container {
-        max-height: 270px;
+        max-height: 200px;
     }
 }
 
@@ -549,6 +568,16 @@ footer li:hover {
     .entete-nav li:hover {
         border-top: none;
         border-bottom: solid 2px var(--main-color);
+    }
+
+    /******* Filtres + Barre de recherche ****/
+
+    .search-form {
+        padding: 0 20px;
+    }
+
+    .search-bar {
+        width: 100%;
     }
 
     /******* Filtres + Barre de recherche ****/
