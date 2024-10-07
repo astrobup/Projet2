@@ -18,17 +18,15 @@
 
     <!-- En-tête du site -->
     <header>
-        <section class="entete">
-            <div class="entete-logo">
-                <img src="images/logo/Booki.png" alt="Logo Booki">
-            </div>
-            <nav class="entete-nav">
-                <ul>
-                    <li class="active"><a href=#hebergements>Hébergements</a></li>
-                    <li><a href=#activites>Activités</a></li>
-                </ul>
-            </nav>
-        </section>
+        <div class="header-logo">
+            <img src="images/logo/Booki.png" alt="Logo Booki">
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li class="active"><a href=#hosting>Hébergements</a></li>
+                <li><a href=#activities>Activités</a></li>
+            </ul>
+        </nav>
     </header>
     <main class="main-container">
 
@@ -69,15 +67,15 @@
             </section>
 
             <!-- Conteneur "Hébergements et populaires" avec les cartes des logements-->
-            <section class="hebergements-and-populaires">
+            <section class="hosting-and-popular">
 
                 <!-- Conteneur "Hébergements "-->
 
-                <section class="hebergements" id="hebergements">
-                    <div class="hebergements-title">
+                <section class="hosting" id="hosting">
+                    <div class="hosting-title">
                         <h2 class="section-title"> Hébergements à Marseille</h2>
                     </div>
-                    <div class="hebergements-cards-container">
+                    <div class="hosting-cards-container">
                         <a href="#" class="card-ctn">
                             <article class="card">
                                 <div class="card-img-ctn">
@@ -221,12 +219,12 @@
                     </div>
                 </section>
                 <!--------------- Conteneur des hôtels populaires --------------->
-                <section class="populaires">
-                    <div class="populaires-title">
+                <section class="popular">
+                    <div class="popular-title">
                         <h2 class="section-title">Les plus populaires</h2>
                         <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
                     </div>
-                    <div class="populaires-cards">
+                    <div class="popular-cards">
                         <a href="#">
                             <article class="card">
                                 <img src="./images/hebergements/emile-guillemot.jpg"
@@ -292,13 +290,13 @@
 
             </section>
             <!--------------- Conteneur des activités --------------->
-            <section class="activites" id="activites">
-                <div class="activites-title">
+            <section class="activities" id="activities">
+                <div class="activities-title">
                     <h2 class="section-title">Activités à Marseille</h2>
                 </div>
-                <div class="activites-cards-container">
+                <div class="activities-cards-container">
                     <a href="#" class="card-ctn-acti">
-                        <article class="card-activites">
+                        <article class="card-activities">
                             <div class="card-image-container">
                                 <img src="./images/activites/reno-laithienne.jpg" alt="Image du Vieux Port">
                             </div>
@@ -310,7 +308,7 @@
                         </article>
                     </a>
                     <a href="#" class="card-ctn-acti">
-                        <article class="card-activites">
+                        <article class="card-activities">
                             <div class="card-image-container">
                                 <img src="./images/activites/paul-hermann.jpg" alt="Image du Fort de Pomègues">
                             </div>
@@ -322,7 +320,7 @@
                         </article>
                     </a>
                     <a href="#" class="card-ctn-acti">
-                        <article class="card-activites">
+                        <article class="card-activities">
                             <div class="card-image-container">
                                 <img src="./images/activites/kilyan-sockalingum.jpg"
                                     alt="Image du Parc national des Calanques">
@@ -335,7 +333,7 @@
                         </article>
                     </a>
                     <a href="#" class="card-ctn-acti">
-                        <article class="card-activites">
+                        <article class="card-activities">
                             <div class="card-image-container">
                                 <img src="./images/activites/florian-wehde.jpg" alt="Image de Notre-Dame-de-la-Garde">
                             </div>
@@ -353,36 +351,34 @@
     </main>
     <!-- Conteneur du pied de page -->
     <footer>
-        <section class="footer-container">
-            <div class="footer-a-propos">
-                <h2 class="footer-h2">À propos</h2>
-                <ul>
-                    <li>Fonctionnement du site</li>
-                    <li>Conditions générales</li>
-                    <li>Données et confidentialités</li>
-                </ul>
-    
-            </div>
-            <div class="footer-hebergements">
-                <h2 class="footer-h2">Nos hébergements</h2>
-                <ul>
-                    <li>Charte qualité</li>
-                    <li>Proposer votre hôtel</li>
-    
-                </ul>
-    
-            </div>
-            <div class="footer-assistance">
-                <h2 class="footer-h2">Assistance</h2>
-                <ul>
-                    <li>Centre d'aide</li>
-                    <li><a href="mailto:contact@booki.fr">Nous contacter</a></li>
-    
-                </ul>
-    
-            </div>
-        </section>
-    
+        <div>
+            <h2 class="footer-h2">À propos</h2>
+            <ul>
+                <li>Fonctionnement du site</li>
+                <li>Conditions générales</li>
+                <li>Données et confidentialités</li>
+            </ul>
+
+        </div>
+        <div>
+            <h2 class="footer-h2">Nos hébergements</h2>
+            <ul>
+                <li>Charte qualité</li>
+                <li>Proposer votre hôtel</li>
+
+            </ul>
+
+        </div>
+        <div>
+            <h2 class="footer-h2">Assistance</h2>
+            <ul>
+                <li>Centre d'aide</li>
+                <li><a href="mailto:contact@booki.fr">Nous contacter</a></li>
+
+            </ul>
+
+        </div>
+
     </footer>
 </body>
 
